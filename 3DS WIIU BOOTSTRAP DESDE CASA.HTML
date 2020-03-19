@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SmashWebsite/Brawl.vol2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    
+  </head>
+  <style>
+    /*Brawl Actualizado agregar mas*/
+  * {
+    box-sizing: border-box;
+  }
+  /* Este body es especialito *//*Nota adaptar fotos de clase*/
+  body {
+    margin: 0;
+    background-image: url("LM-Ejercicios Vol.3/img/background smash 42.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;}
+  
+  /* Style the header */
+  .header {
+    background-color: rgb(0, 68, 196);
+    padding: 20px;
+    text-align: center;
+  }
+  /* Inidice paginas no borrar */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(22, 22, 22);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: inline-block;
+    color: rgb(255, 123, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+   
+  li a:hover {
+    background-color: rgb(0, 52, 194);
+  }
+  
+  .active {
+    background-color: rgba(221, 82, 2, 0.925);
+  }
+  
+  /* Lo que arregla las columnas */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+  
+  /* Lo que arregla las filas */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  /* El fondo coloreado */
+  .Background2
+  {background-color: rgba(219, 214, 214, 0.787);
+  }
+  .Background4wall
+  {background-color: rgb(1, 90, 223);
+  }
+  .BackgroundKirby
+  {background-color: rgba(231, 122, 241, 0.876);
+  }
+  .BackgroundFinalSmash
+  {background-color: rgba(212, 49, 8, 0.876);
+  }
+  /* Titulos para las descripciones */
+  .Titulos2-sp{
+  font-family: Impact;
+  font-size: 250%;
+  text-align: center;
+  color: rgba(212, 49, 8, 0.876);
+  background-color: rgba(0, 0, 0, 0.404);
+  }
+  /* Subtitulos para las descripciones sin uso de backgroun2 */
+  .Titulos2-2{
+  font-family: Impact;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(31, 29, 29);
+  background-color: rgba(155, 155, 155, 0.657);
+  }
+  .Titulos2-Kirby{
+  font-family: Impact;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(214, 68, 214, 0.657);
+  }
+  .Titulos2-MainVilan{
+  font-family: Impact;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(106, 0, 128, 0.657);
+  }
+  .Titulos2-3{
+  font-family: Impact;
+  font-size: 175%;
+  text-align:center;
+  color: rgb(49, 49, 49);
+  }
+  /* Subtitulos para las descripciones */ 
+  .Subitulos-sp{
+  font-family: Impact;
+  font-size: 150%;
+  text-align: center;
+  color: rgba(212, 49, 8, 0.876);
+  background-color: rgba(0, 0, 0, 0.623);
+  }
+  /* Texto para los resumenes */
+  .Texto{font-family: Arial;
+  font-size: 150%;
+  text-align:center;
+  color: black;}
+  /* Texto para descripciones */ 
+  .Texto2{font-family: Arial;
+  font-size: 25px;
+  text-align:center;
+  color: black;}
+  .Texto3{font-family: Arial;
+  font-size: 18px;
+  text-align:center;
+  color: black;}
+  .Textosp{font-family: Arial;
+  font-size: 150%;
+  text-align:center;
+  color: rgba(212, 49, 8, 0.876);}
+  .Texto2sp{font-family: Arial;
+  font-size: 25px;
+  text-align:center;
+  color: rgba(221, 69, 31, 0.911);}
+  .Texto3sp{font-family: Arial;
+  font-size: 18px;
+  text-align:center;
+  color: rgba(212, 49, 8, 0.876);}
+  /* foto perfil personaje */
+  .foto{ display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  .foto6pit{ display:left;
+    margin-left: 71%;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  .foto6palutena{ display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  /* Simbolo del personaje */
+  .foto2{ display:ruby;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;}
+  /* foto imagen reditada */
+  .foto3{ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  /* foto grande para indice-modos */
+  .foto4{ display:table-row;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 500px;
+    height: 250px;
+    
+  }
+  /* cabezera */
+  .foto5{ display:center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0);
+    width: 1000px;
+    height: 250px;
+    
+  }
+  .s1{flex-grow: 1;
+    
+  }
+  .s2{flex-grow: 2;
+    }
+  
+  .s3{flex-grow: 8;
+    }
+  </style>
+  <body>
+    
+    <div class="header">
+      <img class="foto5"  src="LM-Ejercicios Vol.3/img/Smash iv.png">
+    </div>
+    
+    <!--Menu basico--><!--Botones-->
+    <!--Los botones hice que vayan al hacer click te mande a la seccion elegida-->
+    <!--Version de casa-->
+    <a name="LineUp"></a>
+      <ul>
+          <li><a href="SmashWebsite.HTML"class="active">PROJECT ZERO Ver.2.0</a></li>
+          <li><a href="#INDICE" type="button">INTRO</a></li>
+          <li><a href="#MECANICAS" type="button">MECANICAS</a></li>
+          <li><a href="#ARCHIVOS">ARCHIVOS</a></li>
+          <li><a href="#ALONE">+SMASH</a></li>
+          
+      </ul>
+
+<a name="+SMASH"></a>
+<!--Introduccion-->
+
+<!--Introduccion 2-->
+<a name="INDICE"></a>
+<div class="row">
+  <div class="col">
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <div class="s1">
+        <p class="Titulos2-2">INTRODUCCION AL SMASH</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+
+  </div>
+</div>
+<!--Introduccion 2-->
+<div class="row">
+  <div class="col">
+    <div class="Background2">
+      <p class="Texto2"> Super Smash Bros para Nintendo 3DS <br>{ Dairantō Sumasshu Burazāzu fō Nintendō Surī Dī Esu}<br>& Super Smash Bros para Nintendo Wii U <br>{ Dairantō Sumasshu Burazāzu fō Wī Yū}</p>
+     </div>
+
+    <center>
+     <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Smash 3ds.jpg">
+     <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Smash Wii U.png">
+    </center>
+
+     <div class="Background4wall">
+      <p class="Texto2sp">“Por que si para Masahiro Sakurai fue agotador implementar las mecánicas competitivas en  Melee, luego desarrollar una historia que te enganche en Brawl, es turno de crear de cero no 1 sino 2 Super Smash Bros para la Nintendo 3DS enfocada a portátiles y para la Nintendo Wii U su sobremesa actual en ese año.” </p>
+    </div>
+    <div class="Background2">
+      <p class="Texto2">Fueron lanzadas las 2 versiones en el año 2014.<br>La versión de 3DS en Octubre “El primer Smash Bros que consegui y aun conservo la camiseta de la reserva” y la versión de Wii U en Diciembre.</p>
+    </div>
+
+    <center>
+    <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Nintendo 3DS.jpg">
+    <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Nintendo Wii U.jpg">
+   </center>
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <p class="Texto2">El plantel de este Smash IV “decirle todo el rato 3ds Wii U cansa un poco pero el IV lo dire en partes clave” son de 58 perosnajes pero si calculamos en realidad son:</p>
+    </div>
+    <img class="foto4" src="LM-Ejercicios Vol.3/img/Free for all3ds Wiiu.png"><br>
+    <div class="Background4wall">
+      <p class="Texto2sp">58 totales</p>
+      <p class="Texto2sp">-12 del Smash 64</p>
+      <p class="Texto2sp">-11 del Smash Melee (Ice Climbers/Link Niño/Pichu)</p>
+      <p class="Texto2sp">-13 del Smash Brawl (Snake/Entrenador Pokemon con Ivysaur y Squirtle/Wolf)</p>
+    </div>
+    <img class="foto4" src="LM-Ejercicios Vol.3/img/Free for all3ds Wiiu discard.png">
+  </div>
+  
+  <div class="col">
+    <div class="Background4wall">
+      <p class="Texto2sp">“Nos deja con el resultado de 21 personajes nuevos de esta entrega.”<br>“Los recuadros sin color son de anteriores juegos y no se cuentan para la sección de archivos Smash.”</p>
+    </div>
+    <div class="Background4wall">
+      <p class="Texto2sp">“3 persoanjes clásicos regresaron a este Smash que no aparecierón en Brawl.”</p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="Background4wall">
+          <p class="Texto2sp">MELEE</p>
+        </div>
+         <div class="Background2">
+          <p class="Texto2">Mewtwo,Roy,Dr.Mario</p>
+         </div>
+      </div>
+      <div class="col">
+        <div class="Background4wall">
+          <p class="Texto2sp">BRAWL</p>
+        </div>
+        <div class="Background2">
+          <p class="Texto2">Lucas</p>
+         </div>
+      </div>
+    </div>
+    <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">  
+    
+  </div>
+</div><br>
+<!--Mecanicas-->
+
+<!--Mecanicas 2-->
+<a name="MECANICAS"></a>
+<div class="row">
+  <div class="col">
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <div class="s1">
+        <p class="Titulos2-2">MECANICAS</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+
+  </div>
+</div>
+
+<!--Archivos CON COLUMN 2.0-->
+<a name="ARCHIVOS"></a>
+<div class="row">
+  <div class="col">
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <div class="s1">
+        <p class="Titulos2-2">ARCHIVOS SMASH</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+
+  </div>
+</div>
+
+<!--Archivos 2 lo tenemos poner nav bar-->
+
+<!--Archivos 2 lo tenemos-->
+<div class="row">
+  <div class="col">
+    <div class="container-fluid">
+     <p class="Titulos2-sp">[]</p>
+    
+     <div class="Background2">
+       <div class="row">
+        <div class="col">
+         <p class="Texto2">
+          <img class="foto2" class="rounded mx-auto d-block" src="LM-Ejercicios Vol.3/img/AnimalCrossingSymbol.png">
+          <img class="foto" src="LM-Ejercicios Vol.3/img/Perfiles/Villager_SSB4 208.png">
+         </p>
+         </div>
+       </div>
+     </div>
+     <br>
+     <div class="Background2">
+      <p class="Texto">[]</p>
+     </div>
+
+     <img class="foto4" src="img/Foto en construccion.png">
+     <br>
+     <p class="Subitulos-sp">[]</p>
+     <div class="Background2">
+       <p class="Texto3">Texto</p>
+     </div>
+     <p class="Subitulos-sp">[]</p>
+     <div class="Background2">
+       <p class="Texto2">Texto</p>
+     </div>
+       <img class="foto4" src="img/Foto en construccion.png"><BR>
+
+     <div class="Background2">
+       <p class="Texto3">Texto<br></p>
+     </div>
+
+       <img class="foto3" src="img/045 Aldeano Jmmp10.png"><BR>
+
+     <p class="Subitulos-sp">[]</p><BR>
+
+       <img class="foto4" src="img/Foto en construccion.png">
+
+     <div class="Background4wall">
+       <p class="Texto2sp">Texto</p>
+     </div>
+     <div class="row">
+      <div class="col">
+        <p class="Subitulos-sp">Su botón B:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+        <p class="Subitulos-sp">Su B+Stick Direccional:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+      </div>
+
+      <div class="col">
+        
+      </div>
+      <div class="col">
+        <p class="Subitulos-sp">Su botón B:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+        <p class="Subitulos-sp">Su B+Stick Direccional:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+      </div>
+     </div>
+         
+     <p class="Subitulos-sp">[]</p>
+     <div class="Background2">
+      <p class="Texto3">Texto</p>
+      <center>
+       <iframe src="https://www.youtube.com/embed/wY_wCijU1Pk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe src="https://www.youtube.com/embed/xM9weAXCqxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </center>
+     </div>
+      <br><img class="foto4" src="img/27 Tittle.jpg"><br>
+  </div>
+</div>
+
+<div class="col">
+
+</div>
+  
+<div class="col">
+
+</div>
+<!--Experimento Fila-->
+<!--+Smash-->
+<div class="row">
+  <div class="col"></div>
+
+  <div class="col"></div>
+  
+  <div class="col"></div>
+</div>
+
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+    <!--Aitor soy jose miguel.
+    Esto es el html que mi ordenador puede soportar.
+    La pagina esta adaptada en bootstrap mas o menos.
+    Esta agregado color, fondos, texto, fotos y botones 
+    no es como la de clase pero es lo que e podido 
+    hacer desde casa. 
+    La idea es mandar una version con lo que has pedido 
+    y en clase adaptar las 2 ultimas  paginas con bootstrap. 
+    La resolucion de mi ordenador es menor que en clase 
+    asique por eso se ven 2 fotos una debajo de otra.
+    Seguire agregando unicamente lo que hayas mandado 
+    pero si me pasan problemas de sincronizacion lo subo
+    al repositorio y copio la pagina a mi disco duro para
+    tenerlo en el ordenador de clase.-->
+ 
