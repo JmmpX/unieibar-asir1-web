@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SmashWebsite/Brawl.vol2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    
+  </head>
+  <style>
+    /*Brawl Actualizado agregar mas*/
+  * {
+    box-sizing: border-box;
+  }
+  /* Este body es especialito *//*Nota adaptar fotos de clase*/
+  body {
+    margin: 0;
+    background-image: url("LM-Ejercicios Vol.3/img/background smash 42.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;}
+  
+  /* Style the header */
+  .header {
+    background-color: rgb(0, 68, 196);
+    padding: 20px;
+    text-align: center;
+  }
+  /* Inidice paginas no borrar */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(22, 22, 22);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: inline-block;
+    color: rgb(255, 123, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+   
+  li a:hover {
+    background-color: rgb(0, 52, 194);
+  }
+  
+  .active {
+    background-color: rgba(221, 82, 2, 0.925);
+  }
+  
+  /* Lo que arregla las columnas */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+  
+  /* Lo que arregla las filas */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  /* El fondo coloreado */
+  .Background2
+  {background-color: rgba(219, 214, 214, 0.787);
+  }
+  .Background4wall
+  {background-color: rgb(1, 90, 223);
+  }
+  .BackgroundKirby
+  {background-color: rgba(231, 122, 241, 0.876);
+  }
+  .BackgroundFinalSmash
+  {background-color: rgba(212, 49, 8, 0.876);
+  }
+  /* Titulos para las descripciones */
+  .Titulos2-sp{
+  font-family: Impact;
+  font-size: 250%;
+  text-align: center;
+  color: rgba(212, 49, 8, 0.876);
+  background-color: rgba(0, 0, 0, 0.404);
+  }
+  /* Subtitulos para las descripciones sin uso de backgroun2 */
+  .Titulos2-2{
+  font-family: Impact;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(31, 29, 29);
+  background-color: rgba(155, 155, 155, 0.657);
+  }
+  .Titulos2-Kirby{
+  font-family: Impact;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(214, 68, 214, 0.657);
+  }
+  .Titulos2-MainVilan{
+  font-family: Impact;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(106, 0, 128, 0.657);
+  }
+  .Titulos2-3{
+  font-family: Impact;
+  font-size: 175%;
+  text-align:center;
+  color: rgb(49, 49, 49);
+  }
+  /* Subtitulos para las descripciones */ 
+  .Subitulos-sp{
+  font-family: Impact;
+  font-size: 150%;
+  text-align: center;
+  color: rgba(212, 49, 8, 0.876);
+  background-color: rgba(0, 0, 0, 0.623);
+  }
+  /* Texto para los resumenes */
+  .Texto{font-family: Arial;
+  font-size: 150%;
+  text-align:center;
+  color: black;}
+  /* Texto para descripciones */ 
+  .Texto2{font-family: Arial;
+  font-size: 25px;
+  text-align:center;
+  color: black;}
+  .Texto3{font-family: Arial;
+  font-size: 18px;
+  text-align:center;
+  color: black;}
+  .Textosp{font-family: Arial;
+  font-size: 150%;
+  text-align:center;
+  color: rgba(212, 49, 8, 0.876);}
+  .Texto2sp{font-family: Arial;
+  font-size: 25px;
+  text-align:center;
+  color: rgba(221, 69, 31, 0.911);}
+  .Texto3sp{font-family: Arial;
+  font-size: 18px;
+  text-align:center;
+  color: rgba(212, 49, 8, 0.876);}
+  /* foto perfil personaje */
+  .foto{ display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  .foto6pit{ display:left;
+    margin-left: 71%;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  .foto6palutena{ display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  /* Simbolo del personaje */
+  .foto2{ display:ruby;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;}
+  /* foto imagen reditada */
+  .foto3{ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+  }
+  /* foto grande para indice-modos */
+  .foto4{ display:table-row;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 500px;
+    height: 250px;
+    
+  }
+  /* cabezera */
+  .foto5{ display:center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0);
+    width: 1000px;
+    height: 250px;
+    
+  }
+  .s1{flex-grow: 1;
+    
+  }
+  .s2{flex-grow: 2;
+    }
+  
+  .s3{flex-grow: 8;
+    }
+    /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 20%;
+      height: 20%;
+  }
+  </style>
+  
+  <body>
+    
+    <div class="header">
+      <img class="foto5"  src="LM-Ejercicios Vol.3/img/Smash iv.png">
+    </div>
+    
+    <!--Menu basico--><!--Botones-->
+    <!--Los botones hice que vayan al hacer click te mande a la seccion elegida-->
+    <!--Version de casa-->
+    <!--Barnav segunda semana-->
+    
+    <a name="LineUp"></a>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="SmashWebsite.HTML"class="active">PROJECT ZERO Ver.2.0</a></li>
+        <li class="nav-item"><a href="#INDICE" type="button">INTRO</a></li>
+        <li class="nav-item"><a href="#MECANICAS" type="button">MECANICAS</a></li>
+        <li class="nav-item"><a href="#ARCHIVOS">ARCHIVOS</a></li>
+        <li class="nav-item"><a href="#ALONE">+SMASH</a></li>
+      </ul>
+    </nav>
+<a name="+SMASH"></a>
+<!--Into Zona 1-->
+<br>
+<a name="INDICE"></a>
+<div class="row">
+  <div class="col">
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <div class="s1">
+        <p class="Titulos2-2">INTRODUCCION AL SMASH</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+
+  </div>
+</div>
+
+<!--Intro Zona 1 contenido-->
+
+  <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#Zona1">Open file 1</button>
+  <div id="Zona1" class="collapse">
+
+    <div class="row">
+      <div class="col">
+        <div class="Background2">
+          <p class="Texto2"> Super Smash Bros para Nintendo 3DS <br>{ Dairantō Sumasshu Burazāzu fō Nintendō Surī Dī Esu}<br>& Super Smash Bros para Nintendo Wii U <br>{ Dairantō Sumasshu Burazāzu fō Wī Yū}</p>
+         </div>
+    
+        <center>
+         <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Smash 3ds.jpg">
+         <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Smash Wii U.png">
+        </center>
+    
+         <div class="Background4wall">
+          <p class="Texto2sp">“Por que si para Masahiro Sakurai fue agotador implementar las mecánicas competitivas en  Melee, luego desarrollar una historia que te enganche en Brawl, es turno de crear de cero no 1 sino 2 Super Smash Bros para la Nintendo 3DS enfocada a portátiles y para la Nintendo Wii U su sobremesa actual en ese año.” </p>
+        </div>
+        <div class="Background2">
+          <p class="Texto2">Fueron lanzadas las 2 versiones en el año 2014.<br>La versión de 3DS en Octubre “El primer Smash Bros que consegui y aun conservo la camiseta de la reserva” y la versión de Wii U en Diciembre.</p>
+        </div>
+    
+        <center>
+        <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Nintendo 3DS.jpg">
+        <img class="foto2" src="LM-Ejercicios Vol.3/img/Intro/Nintendo Wii U.jpg">
+       </center>
+    
+      </div>
+    
+      <div class="col">
+        <div class="Background2">
+          <p class="Texto2">El plantel de este Smash IV “decirle todo el rato 3ds Wii U cansa un poco pero el IV lo dire en partes clave” son de 58 perosnajes pero si calculamos en realidad son:</p>
+        </div>
+        <img class="foto4" src="LM-Ejercicios Vol.3/img/Free for all3ds Wiiu.png"><br>
+        <div class="Background4wall">
+          <p class="Texto2sp">58 totales</p>
+          <p class="Texto2sp">-12 del Smash 64</p>
+          <p class="Texto2sp">-11 del Smash Melee (Ice Climbers/Link Niño/Pichu)</p>
+          <p class="Texto2sp">-13 del Smash Brawl (Snake/Entrenador Pokemon con Ivysaur y Squirtle/Wolf)</p>
+        </div>
+        <img class="foto4" src="LM-Ejercicios Vol.3/img/Free for all3ds Wiiu discard.png">
+      </div>
+      
+      <div class="col">
+        <div class="Background4wall">
+          <p class="Texto2sp">“Nos deja con el resultado de 21 personajes nuevos de esta entrega.”<br>“Los recuadros sin color son de anteriores juegos y no se cuentan para la sección de archivos Smash.”</p>
+        </div>
+        <div class="Background4wall">
+          <p class="Texto2sp">“3 persoanjes clásicos regresaron a este Smash que no aparecierón en Brawl.”</p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="Background4wall">
+              <p class="Texto2sp">MELEE</p>
+            </div>
+             <div class="Background2">
+              <p class="Texto2">Mewtwo,Roy,Dr.Mario</p>
+             </div>
+          </div>
+          <div class="col">
+            <div class="Background4wall">
+              <p class="Texto2sp">BRAWL</p>
+            </div>
+            <div class="Background2">
+              <p class="Texto2">Lucas</p>
+             </div>
+          </div>
+        </div>
+        <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">  
+        
+      </div>
+    </div><br>
+  </div>
+<!--Intro Zona 1 contenido termina aqui--> 
+<!--Mecanicas Zona 2-->
+<a name="MECANICAS"></a>
+<div class="row">
+  <div class="col">
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <div class="s1">
+        <p class="Titulos2-2">MECANICAS</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+
+  </div>
+</div>
+<!--Mecanicas navbar-->
+<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+  <ul class="navbar-nav">
+    <li class="nav-item"><a href="#3DS" type="button">3DS</a></li>
+    <li class="nav-item"><a href="#WIIU" type="button">WII U</a></li>
+    <li class="nav-item"><a href="#SP" type="button">MECANICAS</a></li>
+  </ul>
+</nav>
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <div class="Background4wall">
+      <p class="Texto2sp"> “Smash 3DS & Smash Wii U tienen varias diferencias de mecánicas uno de otro.”</p>
+    </div>
+  </div>
+  <div class="col"></div>
+ </div>
+<!--Mecanicas Zona 1 contenido-->
+<div class="row">
+  <div class="col">
+  </div>
+ 
+  <div class="col">
+  <div class="Background2">
+    <div class="s1">
+      <p class="Titulos2-3">VERSIÓN 3DS</p>
+    </div>
+  </div>
+  </div>
+ 
+ <div class="col">
+ </div>
+ </div>
+ <a name="3DS"></a>
+<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#Zona2">Open file 2</button>
+<div id="Zona2" class="collapse">
+   <div class="row">
+
+    <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">MODO CLASICO</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">“Primero eliges el porcentaje de dificultad 0.0 facil y 9.9 imposible."</p>
+     </div>
+      
+     <div class="Background2">
+       <p class="Texto2">Después vas por una de 3 rutas fijas por color</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">[Rojo difícil/Verde fácil/Azul medio]</p>
+     </div>
+   <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <div class="Background2">
+       <p class="Texto2">para al final dependiendo del porcentaje pelear contra Master Hand/Master Hand & Crazy Hand/Master Hand Crazy Hand + MASTERCORE  “LA DIFICIL”</p>
+     </div>
+   <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <div class="Background2">
+       <p class="Texto2">“Lo sé porque en un desafio te piden eso y lo consegui.”</p>
+     </div> 
+  
+    </div>
+  
+    <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">LEYENDAS DE LA LUCHA</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">“Se que explique el cómo funciona el modo pero tiene una diferencia.”</p>
+     </div>
+     <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <div class="Background2">
+       <p class="Texto2">“El recorrido es desde juegos clásicos 1980-1984 hasta la actualidad 2014.“</p>
+     </div>
+     
+    </div>
+    
+    <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">ESCENARIOS</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">“Ahora me diras los escenarios son una mecánica y solo hablaste de ellos una vez en Smash 64.”</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">“Solo te dire que lo de los escenarios me lo reservo para Ultimate porque hay están todos y en mejor calidad.”</p>
+     </div>
+     <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <div class="Background2">
+       <p class="Texto2">Aquí pongo una lista de escenarios que están en la versión 3DS y veis que todos son de juegos enfocados a portátil un ejemplo Torre Prisma de Pokémon XY o3D LAND de Super Mario 3D LAND:</p>
+     </div>
+  
+    </div>
+   </div>
+  
+    <div class="row">
+  
+   <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">SMASHVENTURA</p>
+     </div>
+  
+     <div class="Background2">
+       <p class="Texto2">“Exclusivo de 3DS, estas en una mazmorra llena de monstruos de otros juegos de Nintendo y tu objetivo es conseguir potenciadores, herramientas y demás para la pelea final. Hay de todo, goombas, koopa tropas, bonkers, robots del dr.willy, secuaces de Medusa incluso la muerte.”</p>
+     </div>
+  
+  <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+  <div class="Background2">
+       <p class="Texto2">“La ronda final puede varias, desde una carrera, escalar a la cima, pelea normal...”</p>
+     </div>
+   </div>
+   <div class="col">
+     
+   </div>
+   <div class="col">
+     
+   </div>
+    </div>
+</div>
+
+<!--Mecanicas Zona 1 contenido termina aqui-->
+ 
+
+ <div class="row">
+  <div class="col">
+  </div>
+ 
+  <div class="col">
+  <div class="Background2">
+    <div class="s1">
+      <p class="Titulos2-3">VERSIÓN WII U</p>
+    </div>
+  </div>
+  </div>
+ 
+ <div class="col">
+ </div>
+ </div>
+
+ <a name="WIIU"></a>
+<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#Zona3">Open file 2</button>
+<div id="Zona3" class="collapse">
+   <div class="row">
+
+    <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">MODO CLASICO</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">“Tienes que mover la figura de tu personaje hacia el resto hasta quedar solo tu y dependiendo el porcentaje te enfrentas a Master Hand Crazy Hand…”</p>
+     </div>
+     
+   <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+       
+    </div>
+  
+    <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">LEYENDAS DE LA LUCHA</p>
+     </div>
+     <div class="Background2">
+       <p class="Texto2">“Se que explique el cómo funciona el modo pero tiene una diferencia.”</p>
+     </div>
+     <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <div class="Background2">
+       <p class="Texto2">“El recorrido es desde juegos actuales 2014 hasta los clasicos 1980-1984.“</p>
+     </div>
+     
+    </div>
+    
+    <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">ESCENARIOS</p>
+     </div>
+     
+     <div class="Background2">
+       <p class="Texto2">“Aquí los escenarios disponibles son completamente de juegos de sobremesa.”</p>
+     </div>
+     <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+     <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+       
+    </div>
+   </div>
+  
+    <div class="row">
+  
+   <div class="col">
+  
+     <div class="Background4wall">
+       <p class="Texto2sp">MUNDO SMASH</p>
+     </div>
+  
+     <div class="Background2">
+       <p class="Texto2">“Exclusivo de Wii U, una especie de Mario Party pero adaptado a smash bros.”</p>
+     </div>
+  
+  <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+  
+   </div>
+   <div class="col">
+    <div class="Background4wall">
+      <p class="Texto2sp">RETOS A LA CARTA</p>
+    </div>
+ 
+    <div class="Background2">
+      <p class="Texto2">“Exclusivo de Wii U, Master Hand o Crazy Hand te plantean ciertos retos y si los completas te darán recompensas.”</p>
+    </div>
+ 
+ <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+ 
+   </div>
+   <div class="col">
+    <div class="Background4wall">
+      <p class="Texto2sp">SMASH PARA 8</p>
+    </div>
+ 
+    <div class="Background2">
+      <p class="Texto2">“Solo disponible en unos escenarios pero es la primera vez que juegan 8 personajes a la vez.”</p>
+    </div>
+ 
+ <img class="foto4" src="LM-Ejercicios Vol.3/img/Intro/Smash 4 duo.jpg">
+ 
+   </div>
+    </div>
+</div>
+<!--Mecanicas Zona 2 contenido termina aqui-->
+<div class="row">
+  <div class="col">
+  </div>
+ 
+  <div class="col">
+  <div class="Background2">
+    <div class="s1">
+      <p class="Titulos2-3">AMIIBO</p>
+    </div>
+  </div>
+  </div>
+ 
+ <div class="col">
+ </div>
+ </div>
+
+ <a name="SP"></a>
+ <!--No se puede ver el poop pero esta hecho-->
+ <script>
+  $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();   
+  });
+  </script>
+  <button type="button" data-toggle="popover" title="Popover title" data-content="Here's some amazing content.">Click to toggle popover</button>
+<!--No se puede ver el poop pero esta hecho-->
+<form>
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="switch1">
+    <label class="custom-control-label" for="switch1">
+      <div class="Background2">
+        <p class="Texto2">Aqui esta el form</p>
+      </div>
+    </label>
+  </div>
+</form>
+
+<!--Mecanicas Zona 2 contenido termina aqui-->
+<!--Archivos CON COLUMN 2.0-->
+<a name="ARCHIVOS"></a>
+<div class="row">
+  <div class="col">
+
+  </div>
+
+  <div class="col">
+    <div class="Background2">
+      <div class="s1">
+        <p class="Titulos2-2">ARCHIVOS SMASH</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+
+  </div>
+</div>
+
+<!--Archivos 2 lo tenemos poner nav bar-->
+
+<!--Lista e foto corredera-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ul class="carousel-indicators">
+  <li data-target="#demo" data-slide-to="0" class="active"></li>
+  <li data-target="#demo" data-slide-to="1"></li>
+  <li data-target="#demo" data-slide-to="2"></li>
+  <li data-target="#demo" data-slide-to="3"></li>
+  <li data-target="#demo" data-slide-to="4"></li>
+  <li data-target="#demo" data-slide-to="5"></li>
+  <li data-target="#demo" data-slide-to="6"></li>
+  <li data-target="#demo" data-slide-to="7"></li>
+  <li data-target="#demo" data-slide-to="8"></li>
+  <li data-target="#demo" data-slide-to="9"></li>
+  <li data-target="#demo" data-slide-to="10"></li>
+  <li data-target="#demo" data-slide-to="11"></li>
+  <li data-target="#demo" data-slide-to="12"></li>
+  <li data-target="#demo" data-slide-to="13"></li>
+  <li data-target="#demo" data-slide-to="14"></li>
+  <li data-target="#demo" data-slide-to="15"></li>
+  <li data-target="#demo" data-slide-to="16"></li>
+  <li data-target="#demo" data-slide-to="17"></li>
+  <li data-target="#demo" data-slide-to="18"></li>
+  <li data-target="#demo" data-slide-to="19"></li>
+  <li data-target="#demo" data-slide-to="20"></li>
+  <li data-target="#demo" data-slide-to="21"></li>
+  <li data-target="#demo" data-slide-to="22"></li>
+  <li data-target="#demo" data-slide-to="23"></li>
+  <li data-target="#demo" data-slide-to="24"></li>
+  <li data-target="#demo" data-slide-to="25"></li>
+  <li data-target="#demo" data-slide-to="26"></li>
+  <li data-target="#demo" data-slide-to="27"></li>
+  <li data-target="#demo" data-slide-to="28"></li>
+  <li data-target="#demo" data-slide-to="29"></li>
+  <li data-target="#demo" data-slide-to="30"></li>
+  <li data-target="#demo" data-slide-to="31"></li>
+  <li data-target="#demo" data-slide-to="32"></li>
+
+</ul>
+
+<!-- The slideshow 32 huecos-->
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/01 Tittle.jpg"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+  <div class="carousel-item">
+    <img class="foto4"class="rounded mx-auto d-block"src="LM-Ejercicios Vol.3/img/Foto en construccion.png"  width="200" height="200">
+  </div>
+ 
+</div>
+
+<!-- Left and right controls -->
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</a>
+</div>
+
+<!--Archivos 2 lo tenemos-->
+<div class="row">
+  <div class="col">
+    <div class="container-fluid">
+     <p class="Titulos2-sp">[]</p>
+    
+     <div class="Background2">
+       <div class="row">
+        <div class="col">
+         <p class="Texto2">
+          <img class="foto2" class="rounded mx-auto d-block" src="LM-Ejercicios Vol.3/img/AnimalCrossingSymbol.png">
+          <img class="foto" src="LM-Ejercicios Vol.3/img/Perfiles/Villager_SSB4 208.png">
+         </p>
+         </div>
+       </div>
+     </div>
+     <br>
+     <div class="Background2">
+      <p class="Texto">[]</p>
+     </div>
+
+     <img class="foto4" src="img/Foto en construccion.png">
+     <br>
+     <p class="Subitulos-sp">[]</p>
+     <div class="Background2">
+       <p class="Texto3">Texto</p>
+     </div>
+     <p class="Subitulos-sp">[]</p>
+     <div class="Background2">
+       <p class="Texto2">Texto</p>
+     </div>
+       <img class="foto4" src="img/Foto en construccion.png"><BR>
+
+     <div class="Background2">
+       <p class="Texto3">Texto<br></p>
+     </div>
+
+       <img class="foto3" src="img/045 Aldeano Jmmp10.png"><BR>
+
+     <p class="Subitulos-sp">[]</p><BR>
+
+       <img class="foto4" src="img/Foto en construccion.png">
+
+     <div class="Background4wall">
+       <p class="Texto2sp">Texto</p>
+     </div>
+     <div class="row">
+      <div class="col">
+        <p class="Subitulos-sp">Su botón B:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+        <p class="Subitulos-sp">Su B+Stick Direccional:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+      </div>
+
+      <div class="col">
+        
+      </div>
+      <div class="col">
+        <p class="Subitulos-sp">Su botón B:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+        <p class="Subitulos-sp">Su B+Stick Direccional:</p>
+        <div class="Background2">
+          <p class="Texto3">Texto</p>
+        </div>
+      </div>
+     </div>
+         
+     <p class="Subitulos-sp">[]</p>
+     <div class="Background2">
+      <p class="Texto3">Texto</p>
+      <center>
+       <iframe src="https://www.youtube.com/embed/wY_wCijU1Pk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe src="https://www.youtube.com/embed/xM9weAXCqxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </center>
+     </div>
+      <br><img class="foto4" src="img/27 Tittle.jpg"><br>
+  </div>
+</div>
+
+<div class="col">
+
+</div>
+  
+<div class="col">
+
+</div>
+<!--Experimento Fila-->
+<!--+Smash-->
+<div class="row">
+  <div class="col"></div>
+
+  <div class="col"></div>
+  
+  <div class="col"></div>
+</div>
+
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+    <!--Aitor soy jose miguel.
+    Esto es el html que mi ordenador puede soportar.
+    La pagina esta adaptada en bootstrap mas o menos.
+    Esta agregado color, fondos, texto, fotos y botones 
+    no es como la de clase pero es lo que e podido 
+    hacer desde casa. 
+    La idea es mandar una version con lo que has pedido 
+    y en clase adaptar las 2 ultimas  paginas con bootstrap. 
+    La resolucion de mi ordenador es menor que en clase 
+    asique por eso se ven 2 fotos una debajo de otra.
+    Seguire agregando unicamente lo que hayas mandado 
+    pero si me pasan problemas de sincronizacion lo subo
+    al repositorio y copio la pagina a mi disco duro para
+    tenerlo en el ordenador de clase.-->
+ 
